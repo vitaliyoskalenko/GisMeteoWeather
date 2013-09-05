@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ 	Copyright (C) 2012 Vitaly Oskalenko, oskalenkoVit@ukr.net 
+ 	This is an open source project that can be used for own purposes
+ 	but should be released under name of new owner
+-->
+
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="288dip"
+    android:minHeight="72dip"
+    android:updatePeriodMillis="5000"
+    android:initialLayout="@layout/weather_widget"
+    android:configure="com.voskalenko.weather.gui.ConfiguratorActivity">
+</appwidget-provider>

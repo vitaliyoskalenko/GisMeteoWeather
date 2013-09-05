@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ 	Copyright (C) 2012 Vitaly Oskalenko, oskalenkoVit@ukr.net 
+ 	This is an open source project that can be used for own purposes
+ 	but should be released under name of new owner
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:orientation="horizontal"
+        android:padding="6dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/detailed_weather"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/city_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:text="Херсон"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TableRow style="@style/HeaderStyle" >
+
+            <TextView android:text="" />
+
+            <TextView
+                style="@style/HeaderStyle"
+                android:text="@string/evening" />
+
+            <TextView
+                style="@style/HeaderStyle"
+                android:text="@string/night" />
+
+            <TextView
+                style="@style/HeaderStyle"
+                android:text="@string/morning" />
+
+            <TextView
+                style="@style/HeaderStyle"
+                android:text="@string/afternoon" />
+
+        </TableRow>
+
+        <TableRow style="@style/HeaderStyle" >
+
+            <TextView android:text="" />
+
+            <TextView
+                style="@style/columnStyle"
+                android:text="20:00 23:00" />
+
+            <TextView
+                style="@style/columnStyle"
+                android:text="2:00 5:00" />
+
+            <TextView
+                style="@style/columnStyle"
+                android:text="8:00 11:00" />
+
+            <TextView
+                style="@style/columnStyle"
+                android:text="14:00 17:00" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:padding="3dip"
+                android:text="" />
+
+            <ImageView
+                android:id="@+id/iconEvening"
+                android:layout_width="48dip"
+                android:layout_height="fill_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/light_0cloud" />
+
+            <ImageView
+                android:id="@+id/iconNight"
+                android:layout_width="48dip"
+                android:layout_height="fill_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/light_0cloud" />
+
+            <ImageView
+                android:id="@+id/iconMorning"
+                android:layout_width="48dip"
+                android:layout_height="fill_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/light_0cloud" />
+
+            <ImageView
+                android:id="@+id/iconAfternoon"
+                android:layout_width="48dip"
+                android:layout_height="fill_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/light_0cloud" />
+        </TableRow>
+
+        <TableRow android:background="#D2ECFB" >
+
+            <TextView
+                style="@style/columnStyle"
+                android:text="@string/temperature2" />
+
+            <TextView
+                android:id="@+id/temper3"
+                style="@style/CellStyle"
+                android:paddingLeft="15dp"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/temper0"
+                style="@style/CellStyle"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/temper1"
+                style="@style/CellStyle"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/temper2"
+                style="@style/CellStyle"
+                android:text="1" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/columnStyle"
+                android:text="@string/heat" />
+
+            <TextView
+                android:id="@+id/heat3"
+                style="@style/CellStyle"
+                android:paddingLeft="15dp"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/heat0"
+                style="@style/CellStyle"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/heat1"
+                style="@style/CellStyle"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/heat2"
+                style="@style/CellStyle"
+                android:text="1" />
+        </TableRow>
+
+        <TableRow android:background="#D2ECFB" >
+
+            <TextView
+                style="@style/columnStyle"
+                android:text="@string/pressure2" />
+
+            <TextView
+                android:id="@+id/pressure3"
+                style="@style/CellStyle"
+                android:paddingLeft="15dp"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/pressure0"
+                style="@style/CellStyle"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/pressure1"
+                style="@style/CellStyle"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/pressure2"
+                style="@style/CellStyle"
+                android:text="1" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/columnStyle"
+                android:text="@string/relwet2" />
+
+            <TextView
+                android:id="@+id/relwet3"
+                style="@style/CellStyle"
+                android:paddingLeft="15dp"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/relwet0"
+                style="@style/CellStyle"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/relwet1"
+                style="@style/CellStyle"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/relwet2"
+                style="@style/CellStyle"
+                android:text="1" />
+        </TableRow>
+
+        <TableRow android:background="#D2ECFB" >
+
+            <TextView
+                style="@style/columnStyle"
+                android:text="@string/wind2" />
+
+            <TextView
+                android:id="@+id/wind3"
+                style="@style/CellStyle"
+                android:paddingLeft="15dp"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/wind0"
+                style="@style/CellStyle"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/wind1"
+                style="@style/CellStyle"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/wind2"
+                style="@style/CellStyle"
+                android:text="1" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/columnStyle"
+                android:text="@string/wind_direction" />
+
+            <ImageView
+                android:id="@+id/wind_direct_3"
+                android:layout_width="48dip"
+                android:layout_height="fill_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/wind_direct_0" />
+
+            <ImageView
+                android:id="@+id/wind_direct_0"
+                android:layout_width="48dip"
+                android:layout_height="fill_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/wind_direct_1" />
+
+            <ImageView
+                android:id="@+id/wind_direct_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@drawable/wind_direct_2" />
+
+            <ImageView
+                android:id="@+id/wind_direct_2"
+                android:layout_width="48dip"
+                android:layout_height="fill_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/wind_direct_3" />
+        </TableRow>
+
+        <TableRow android:background="#D2ECFB" >
+
+            <TextView
+                style="@style/columnStyle"
+                android:text="@string/cloudiness" />
+
+            <TextView
+                android:id="@+id/cloudiness3"
+                style="@style/CellStyle"
+                android:paddingLeft="15dp"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/cloudiness0"
+                style="@style/CellStyle"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/cloudiness1"
+                style="@style/CellStyle"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/cloudiness2"
+                style="@style/CellStyle"
+                android:text="1" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/columnStyle"
+                android:text="@string/precipitation" />
+
+            <TextView
+                android:id="@+id/precipitation3"
+                style="@style/CellStyle"
+                android:paddingLeft="15dp"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/precipitation0"
+                style="@style/CellStyle"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/precipitation1"
+                style="@style/CellStyle"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/precipitation2"
+                style="@style/CellStyle"
+                android:text="1" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/details_background"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
+            android:text="Weather for evening"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:text="Ukraine, Kherson"
+            android:textSize="7sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="6dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="6dp" >
+
+                <ImageView
+                    android:id="@+id/iconTod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/dark_0cloud" />
+
+                <TextView
+                    android:id="@+id/precipitation"
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content"
+                    android:lines="2"
+                    android:text="Cloudy, light rain"
+                    android:textSize="7sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/thermometer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/thermometer_cold" />
+
+                <TextView
+                    android:id="@+id/temper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="15 C"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="15dp" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/wind" />
+
+                    <TextView
+                        android:id="@+id/wind"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingLeft="4dp"
+                        android:text="2 m/sec SE"
+                        android:textSize="8sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/pressure" />
+
+                    <TextView
+                        android:id="@+id/pressure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingLeft="12dp"
+                        android:text="736  mm Hg"
+                        android:textSize="8sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/relwet" />
+
+                    <TextView
+                        android:id="@+id/relwet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingLeft="5dp"
+                        android:text="99%"
+                        android:textSize="8sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/spinner_background"
+            android:src="@android:drawable/ic_menu_revert" />
+    </LinearLayout>
+
+</LinearLayout>

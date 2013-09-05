@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ 	Copyright (C) 2012 Vitaly Oskalenko, oskalenkoVit@ukr.net 
+ 	This is an open source project that can be used for own purposes
+ 	but should be released under name of new owner
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/lstFoundCities"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:background="@drawable/background"
+        android:choiceMode="singleChoice"
+        android:drawSelectorOnTop="true" />
+
+    <LinearLayout
+        android:id="@+id/search_result_layout1"
+        style="@android:style/ButtonBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:background="@android:drawable/screen_background_light"
+        android:padding="4dp">
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:text="@string/confirm_append" 
+            android:background="@android:drawable/spinner_background"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cancel_append" 
+            android:background="@android:drawable/spinner_background"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+</LinearLayout>

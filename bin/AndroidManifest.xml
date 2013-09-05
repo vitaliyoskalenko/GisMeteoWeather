@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ 	Copyright (C) 2012 Vitaly Oskalenko, oskalenkoVit@ukr.net 
+ 	This is an open source project that can be used for own purposes
+ 	but should be released under name of new owner
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.voskalenko.weather"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="11" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.NFC" />
+
+    <application
+        android:name="com.voskalenko.weather.WeatherApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <activity
+            android:name="com.voskalenko.weather.gui.MainActivity"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.voskalenko.weather.gui.DetailsActivity"
+            android:label="@string/title_activity_details" >
+        </activity>
+        
+        <activity
+            android:name="com.voskalenko.weather.gui.CitySearchActivity"
+            android:label="@string/city_search" >
+        </activity>
+        
+        <activity
+            android:name="com.voskalenko.weather.gui.SearchResultActivity"
+            android:label="@string/title_activity_search_result" >
+        </activity>
+
+        <receiver
+            android:name="com.voskalenko.weather.services.AutoRunService"
+            android:label="AutoRunService" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.voskalenko.weather.services.WeatherService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+
+        <provider
+            android:name="com.voskalenko.weather.datebase.ForecastProvider"
+            android:authorities="com.voskalenko.provider.Weather" >
+        </provider>
+
+        <receiver
+            android:name="com.voskalenko.weather.gui.WeatherWidget"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.voskalenko.weather.WEATHER_REFRESHED" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_provider" />
+        </receiver>
+
+        <activity
+            android:name="com.voskalenko.weather.gui.ConfiguratorActivity"
+            android:label="@string/title_activity_configurator" >
+            <intent-filter>
+                <action android:name="android.apwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+        
+    </application>
+
+</manifest>

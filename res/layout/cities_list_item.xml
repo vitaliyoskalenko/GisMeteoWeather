@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ 	Copyright (C) 2012 Vitaly Oskalenko, oskalenkoVit@ukr.net 
+ 	This is an open source project that can be used for own purposes
+ 	but should be released under name of new owner
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="2dip"
+    android:paddingBottom="2dip"
+    android:orientation="horizontal" 
+    android:background="#DFE3F7">
+
+    <TextView
+        android:id="@+id/txtCountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#D0D7F9"
+ />
+
+    <TextView
+        android:id="@+id/txtCity_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#DFE3F7" />
+
+</LinearLayout>

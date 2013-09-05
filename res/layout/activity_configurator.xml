@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ 	Copyright (C) 2012 Vitaly Oskalenko, oskalenkoVit@ukr.net 
+ 	This is an open source project that can be used for own purposes
+ 	but should be released under name of new owner
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <CheckBox
+            android:id="@+id/chkActiveUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="@string/active_update" />
+
+        <RadioGroup
+            android:id="@+id/rGrUpdateChoice"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip" >
+
+            <RadioButton
+                android:id="@+id/rbtnUpdateDaily"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:tag="43200000"
+                android:text="@string/update_daily"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <RadioButton
+                android:id="@+id/rbtnUpdateTwice"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:tag="21600000"
+                android:text="@string/update_twice"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnManualUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_update" />
+
+        <TextView
+            android:id="@+id/txtFavoriteCity"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:text="@string/choose_favorite_city"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <ListView
+            android:id="@+id/lstFavoriteCity"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:choiceMode="singleChoice"
+            android:drawSelectorOnTop="true" />
+
+        <LinearLayout
+            style="@android:style/ButtonBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" 
+            android:background="@android:drawable/screen_background_light"
+            android:padding="4dp">
+
+            <Button
+                android:id="@+id/btnSaveConfigure"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:text="@string/save_configure" 
+                android:textSize="18sp"
+                android:background="@android:drawable/spinner_background"/>
+
+            <Button
+                android:id="@+id/btnCancelConfigure"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:text="@string/cancel_save" 
+                android:textSize="18sp"
+                android:background="@android:drawable/spinner_background"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

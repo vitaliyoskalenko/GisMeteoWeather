@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ 	Copyright (C) 2012 Vitaly Oskalenko, oskalenkoVit@ukr.net 
+ 	This is an open source project that can be used for own purposes
+ 	but should be released under name of new owner
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/background"
+    android:fillViewport="true">
+
+    <ListView
+        android:id="@+id/lstCities"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:choiceMode="singleChoice"
+        android:drawSelectorOnTop="true" />
+
+    <TextView
+        android:id="@+id/txtUnsuccessfulSearch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:text="@string/unsuccessful_search"
+        android:textColor="#FA050B"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txtSuccessfulSearch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:text="@string/successful_search"
+        android:textColor="#0FAB1A"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/city_search_layout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_horizontal"
+        android:visibility="gone" >
+
+        <ImageButton
+            android:id="@+id/btnSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_menu_search" 
+            android:background="@android:drawable/spinner_background">
+        </ImageButton>
+
+        <EditText
+            android:id="@+id/edCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btnSearch"
+            android:layout_alignTop="@+id/btnSearch"
+            android:layout_toLeftOf="@+id/btnSearch"
+            android:layout_toRightOf="@+id/btnBack"
+            android:background="@android:drawable/spinner_background"
+            android:inputType="text"
+            android:text="херсо"
+            android:textSize="24sp"
+            android:textStyle="bold" >
+
+        </EditText>
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@android:drawable/spinner_background"
+            android:focusable="false"
+            android:padding="13dp"
+            android:scaleType="center"
+            android:src="@drawable/arrow_right_float" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/city_search_layout2"
+        style="@android:style/ButtonBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/screen_background_light"
+        android:orientation="horizontal"
+        android:padding="4dp" >
+
+        <Button
+            android:id="@+id/btnSearchCity"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:drawable/spinner_background"
+            android:text="@string/search_city"
+            android:textSize="18sp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btnDelCity"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:drawable/spinner_background"
+            android:enabled="false"
+            android:text="@string/del_city"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ 	Copyright (C) 2012 Vitaly Oskalenko, oskalenkoVit@ukr.net 
+ 	This is an open source project that can be used for own purposes
+ 	but should be released under name of new owner
+-->
+
+<resources>
+    <string name="app_name">Gismeteo погода</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Прогноз погоды</string>
+    <string name="title_activity_details">Детальный прогноз</string>
+    <string name="title_activity_search_result">Результат поиска</string>
+    <string name="title_activity_configurator">Настройка виджета</string>
+    <string name="city_search">Добавление города</string>
+    <string name="add_city">Добавить город</string>
+    <string name="get_weather">Получить погоду</string>
+    <string name="city">Город</string>
+    <string name="date">Дата</string>
+    <string name="temperature">"Температура: %1$d...%2$d С"</string>
+    <string name="relwet">"Влажность: %1$d...%2$d"</string>
+    <string name="pressure">"Давление: %1$d...%2$d мм.рт.ст"</string>
+    <string name="wind">"Ветер: %1$s %2$d...%3$d м/с"</string>
+    <string name="temperature2">"Температура, С"</string>
+    <string name="heat">Чувствуется как</string>
+    <string name="pressure2">"Давление, мм"</string>
+    <string name="relwet2">"Влажность, %"</string>
+    <string name="wind2">"Ветер, м/сек"</string>
+    <string name="cloudiness">Облачность</string>
+    <string name="precipitation">Тип осадков</string>
+    <string name="night">Ночь</string>
+    <string name="morning">Утро</string>
+    <string name="afternoon">День</string>
+    <string name="evening">Вечер</string>
+    <string name="previous_forecast">Предыдущий прогноз погоды</string>
+    <string name="tod">Погода на</string>
+    <string name="search_city">Найти город</string>
+    <string name="del_city">Удалить город</string>
+    <string name="confirm_append">Подвердить</string>
+    <string name="cancel_append">Отменить</string>
+    <string name="confirm_delete">Подтвердить удаление</string>
+    <string name="alarm">Предупреждение</string>
+    <string name="cancel_delete">Отменить удаление</string>
+    <string name="unsuccessful_search">"Неудачный поиск по запросу [%s]"</string>
+    <string name="successful_search">"В список был добавлен [%s]"</string>
+    <string name="search">Поиск</string>
+    <string name="detailed_weather">Детальная погода в городе</string>
+    <string name="widget_home_city">"Прогноз от GisMeteo.ua для города %s"</string>
+    <string name="loading_content">Обновление погоды</string>
+    <string name="server_connecting">Связь с сервером</string>
+    <string name="forming_weather_list">Формирование списка погоды</string>
+    <string name="forming_cities_list">Формирование списка городов</string>
+    <string name="wait_Please">Подождите пожалуйста</string>
+    <string name="active_update">Активировать обновления</string>
+    <string name="update_daily">Раз в день</string>
+    <string name="update_twice">Дважды на день</string>
+    <string name="choose_favorite_city">"Выберите город для виджета [%s]"</string>
+    <string name="save_configure">Сохранить изменения</string>
+    <string name="cancel_save">Отменить изменения</string>
+    <string name="manual_update">Ручное обновление</string>
+    <string name="wind_direction">Ветер, направление</string>
+    
+
+    <string-array name="direction">
+        <item>cевер</item>
+        <item>cеверо-восток</item>
+        <item>восток</item>
+        <item>юго-восток</item>
+        <item>юг</item>
+        <item>юго-запад</item>
+        <item>запад</item>
+        <item>северо-запад</item>
+    </string-array>
+    <string-array name="weekday">
+        <item></item>
+        <item>ВС</item>
+        <item>ПН</item>
+        <item>ВТ</item>
+        <item>СР</item>
+        <item>ЧТ</item>
+        <item>ПТ</item>
+        <item>СБ</item>
+    </string-array>
+    <string-array name="tod">
+        <item>ночь</item>
+        <item>утро</item>
+        <item>день</item>
+        <item>вечер</item>
+    </string-array>
+    <string-array name="cloudiness">
+        <item>ясно</item>
+        <item>малооблачно</item>
+        <item>облачно</item>
+        <item>пасмурно</item>
+    </string-array>
+    <string-array name="precipitation">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>дождь</item>
+        <item>ливень</item>
+        <item>снег</item>
+        <item>снег</item>
+        <item>гроза</item>
+        <item>нет данных</item>
+        <item>без осадков</item>
+    </string-array>
+</resources>
